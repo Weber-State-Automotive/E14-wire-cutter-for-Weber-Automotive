@@ -18,7 +18,7 @@
 #define PIN_BUTTON_ENC 4 //the actual button in the encoder that is clicked
 #define PIN_BUTTON_RED 13 //again, not used we think, will adjust accordingly. 
 #define PIN_LED 13   // we dont know what this does yet. 
-#define PIN_SENSOR A8 //moved to a8 due to a0 being occupied (RED wire to 5V, BLACK wire to GND, BLUE wire to A8)
+#define PIN_SENSOR A8 //moved to a8 due to a0 being occupied (RED wire to 5V, BLACK wire to GND, BLUE wire to A8) https://www.farnell.com/datasheets/47017.pdf
 #define WIRE_QUANT_MIN 1
 #define WIRE_QUANT_MAX 100
 #define WIRE_MIN_LEN 5 
