@@ -119,7 +119,7 @@ void setup(){
 
 void loop(){
  // be sure to turn to comment below here during normal operation
-  curTime = millis(); // VERY BASIC Calibration measurement
+  /*curTime = millis(); // VERY BASIC Calibration measurement
   if (curTime - lastTime > deltaTime){
     lastTime = curTime;
      getInput();
@@ -135,7 +135,7 @@ void loop(){
     cutPos = 63 * scrollPos;
     stepCut.moveTo(cutPos);
   }
-
+*/
   //be sure to turn to comment above here suring normal operation
   stepCut.run();
   
