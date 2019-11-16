@@ -4,7 +4,6 @@
 #include <Bounce2.h>
 #include <Encoder.h>
 
-// to do: 1. adjust wheel radius for the feed system. 2. adjust direction of cutting head. 3. mount the hall effect sensor. 4. calibrate the blades, 
 // READ ME READ ME 
 // This is made for Weber State University Automotive program, and is different than the original Element14 project. That being said, the wiring is VERY similar, and we will have a seperate file that is specifically
 // for the schools specific system for our systems differs from the Element14 version in mechanical operation, but again has extremely similar wiring. There was real effort to follow the instructions as close as possible, and reflect it in our builds. Please file an issue on github if you need assistance, though turn around times may vary.
