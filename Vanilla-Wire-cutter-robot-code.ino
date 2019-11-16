@@ -4,7 +4,7 @@
 #include <Encoder.h>
 
 // READ ME READ ME 
-// This is made for Weber State University Automotive program, and is different than the original Element14 project. That being said, the wiring is VERY similar, and we will have a seperate file that is specifically
+// This is a slightly modified version of the original E14 project From student workers at Weber State University Automotive program. That being said, the wiring is VERY similar, and we will have a seperate file that is specifically
 // for the schools specific system for our systems differs from the Element14 version in mechanical operation, but again has extremely similar wiring. There was real effort to follow the instructions as close as possible, and reflect it in our builds. Please file an issue on github if you need assistance, though turn around times may vary.
 // 
 //For the buttons and encoder info, we built a break out board to handle the repeated need for the 5v and GND bus, as long as the pins match, 
