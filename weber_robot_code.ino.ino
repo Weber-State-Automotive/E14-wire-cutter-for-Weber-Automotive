@@ -53,7 +53,7 @@ long encPos = -999;
 long lastEncPos = 0;
 
 long retractPos = 1700; //how much should i be open, lower the number, smaller the hole, and make sure the blades are always touching. 
-long stripPos = 270; // 9how shut must i be to strip , smaller the number, the smaller the hole and the deeper the cut
+long stripPos = 270; //how shut must i be to strip , smaller the number, the smaller the hole and the deeper the cut
 long stripFeedDistance = 0;
 long lengthFeedDistance = 0;
 long cutPos = -200; //how far do I need to go to make sure I cut it. dont go to far or might damage blades
