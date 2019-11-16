@@ -51,11 +51,11 @@ int lastScrollPos = -99;
 long encPos = -999;
 long lastEncPos = 0;
 
-long retractPos = -3600;
-long stripPos = -1000; //
+long retractPos = -3600; // how much should i be open, lower the number, smaller the hole, and make sure the blades are always touching. remove the "-" if needed the cutter head to move opposite direction.
+long stripPos = -1000; // how small the gap for stripping. remove the "-" if needed the cutter head to move opposite direction.
 long stripFeedDistance = 0;
 long lengthFeedDistance = 0;
-long cutPos = 200; 
+long cutPos = 200; //is the " how far do i need to go to make sure i cut it." remove the "-" if needed the cutter head to move opposite direction. add more to ensure a good clean cut, 
 long targetPos = 0;
 boolean isHomed = false;
 int bladeCycleState = 0;
@@ -193,8 +193,9 @@ void loop(){
               printJobStatus();
               setBlade('R');
               stepFeed.setCurrentPosition(0);
-              stripFeedDistance = 32* round(float(wireStripLength)/feed_res);
-              lengthFeedDistance = 32* round((2.0*float(wireStripLength))/feed_res);
+              stripFeedDistance = 32* round(float(wireStripLength)/feed_res); // if you need to spin the motors the other way, add a "-" in front o fthe 32 to change direction on both
+              lengthFeedDistance = 32* round((2.0*float(wireStripLength))/feed_res); // this was a problem child, might work for your application, replace with version in next line if problems arise as this so far "works" needs better testing for us
+              // lengthFeedDistance = -(32* ((wireLength - 2*(wireStripLength))/feed_res));
               Serial.print("FEED STEPS: ");Serial.println(stripFeedDistance);
               Serial.print("FEED DIST: ");Serial.println(lengthFeedDistance);
               
@@ -324,8 +325,8 @@ void setBlade(char bladePos){
         if (curTime - lastTime > 100){
           lastTime = curTime;
           sensorVal = analogRead(PIN_SENSOR);
-          if (sensorVal < 430){
-            targetPos += 63;
+          if (sensorVal < 430){  //change me to adjust the home 
+            targetPos += 63; //this is how fast and accurate i find home (which is a closed cutter with no gaps)
             stepCut.moveTo(targetPos);
           } else {
             isHomed = true;
